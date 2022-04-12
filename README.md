@@ -3,11 +3,11 @@
 ### После развернтывания контейнеров необходимо поправить права:
 ```
 # в папке с docker-compose.yml
-sudo chown -R 5050:5050 $pgadmin
+sudo chown -R 5050:5050 pgadmin
 ```
 
 ### Postgesql DB 13.3
-Параметры:
+
 ```
       - "max_connections=50"
       - "shared_buffers=1GB"
@@ -35,7 +35,7 @@ sudo chown -R 5050:5050 $pgadmin
 Не забудьте ввести учетные данные от БД для healthcheck
 ``` test: ["CMD-SHELL", "pg_isready -U testdb -d testdb"] ```
 
-### PGAdmin4 5.7 - графический веб интерфес для управления postresql
+### PGAdmin4 - графический веб интерфес для управления postresql
 Переменные:
 ```
       PGADMIN_DEFAULT_EMAIL: "fofonovrv@gmail.com"
